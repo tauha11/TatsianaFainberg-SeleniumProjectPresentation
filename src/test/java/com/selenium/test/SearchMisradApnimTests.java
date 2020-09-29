@@ -1,5 +1,6 @@
 package com.selenium.test;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -20,6 +21,10 @@ public class SearchMisradApnimTests {
     }
     @Test
     public void SearchFromNavMenuTest(){
+        //click on Kabalat Kahal
+        wd.findElement(By.cssSelector("#tm-4")).click();
+        String pageTitle = wd.findElement(By.cssSelector("h1 span")).getText();
+        System.out.println(pageTitle);
 
 
     }
